@@ -1364,7 +1364,7 @@ type ItemGQLType implements Node {
   frequency: Int
   patientCategory: Int!
   auditUserId: Int!
-  program: ProgramGQLType!
+  program: ProgramGQLType
   pricelistDetails(offset: Int, before: String, after: String, first: Int, last: Int, itemsPricelist: ID): ItemsPricelistDetailGQLTypeConnection!
   items(offset: Int, before: String, after: String, first: Int, last: Int, id: ID): ProductItemGQLTypeConnection!
   claimitemSet: [ClaimItemGQLType!]!

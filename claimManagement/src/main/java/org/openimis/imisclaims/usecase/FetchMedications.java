@@ -52,7 +52,7 @@ public class FetchMedications {
                                         /* name = */ node.name(),
                                         /* price = */ node.price(),
                                         "XAF",
-                                        /* program = */ node.program().idProgram()
+                                        /* program = */node.program() != null ? node.program().idProgram() : null
                                 );
                             })
             );

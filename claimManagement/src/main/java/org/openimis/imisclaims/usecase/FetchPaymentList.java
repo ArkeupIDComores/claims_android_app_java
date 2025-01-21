@@ -67,7 +67,7 @@ public class FetchPaymentList {
                 /* name = */ item.name(),
                 /* price = */ item.price(),
                 /* currency = */ "XAF",
-                item.program().idProgram()
+                item.program()!= null ? item.program().idProgram() : null
         );
     }
 }

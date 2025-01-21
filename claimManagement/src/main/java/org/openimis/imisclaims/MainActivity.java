@@ -529,7 +529,10 @@ public class MainActivity extends ImisActivity {
 
                 } catch (Exception e) {
                     e.printStackTrace();
-                    runOnUiThread(() -> progressDialog.dismiss());
+                    runOnUiThread(() -> {
+                        progressDialog.dismiss();
+                        ErrorDialogBox(e.getMessage());
+                    });
                 }
             });
             thread.start();
@@ -611,7 +614,10 @@ public class MainActivity extends ImisActivity {
                     }
                 } catch ( Exception e) {
                     e.printStackTrace();
-                    runOnUiThread(() -> progressDialog.dismiss());
+                    runOnUiThread(() -> {
+                        progressDialog.dismiss();
+                        ErrorDialogBox(e.getMessage());
+                    });
                 }
             });
             thread.start();
@@ -653,7 +659,10 @@ public class MainActivity extends ImisActivity {
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
-                    runOnUiThread(() -> progressDialog.dismiss());
+                    runOnUiThread(() -> {
+                        progressDialog.dismiss();
+                        ErrorDialogBox(e.getMessage());
+                    });
                 }
             });
             thread.start();
@@ -746,9 +755,7 @@ public class MainActivity extends ImisActivity {
 
                         runOnUiThread(() -> {
                             progressDialog.dismiss();
-                            if( officerCode != null){
-                                downloadServices(officerCode);
-                            }
+                            downloadServices(officerCode);
                         });
                     } catch (Exception e) {
                         e.printStackTrace();
