@@ -1,77 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/activity_horizontal_margin"
-    android:layout_marginTop="@dimen/activity_vertical_margin"
-    android:layout_marginEnd="@dimen/activity_horizontal_margin"
-    android:background="@drawable/side_nav_bar"
-    android:orientation="vertical"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
     tools:context=".claimlisting.ClaimListingFragment">
 
-    <RelativeLayout
-        android:id="@+id/firstLine"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/claimCode"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/firstLine"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="@dimen/text_margin"
-            android:layout_marginStart="@dimen/text_margin"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_header">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-        </TextView>
+            <TextView
+                android:id="@+id/claimCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="CLM-001" />
 
-        <TextView
-            android:id="@+id/claimDate"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/claimDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp"
+                tools:text="2024-01-15" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondLine"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/text_margin"
-            android:layout_marginTop="@dimen/text_margin"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_header">
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-        </TextView>
+            <TextView
+                android:id="@+id/insureeNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp"
+                tools:text="CHF-12345" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/totalClaimed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="5000 KMF" />
 
-    <RelativeLayout
-        android:id="@+id/secondLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/firstLine"
-        android:orientation="horizontal">
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/insureeNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="@dimen/text_margin"
-            android:layout_marginStart="@dimen/text_margin"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_content">
+    </LinearLayout>
 
-        </TextView>
-
-        <TextView
-            android:id="@+id/totalClaimed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="@dimen/text_margin"
-            android:layout_marginEnd="@dimen/text_margin"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_content">
-
-        </TextView>
-    </RelativeLayout>
-
-</RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,27 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#090925</color>
-    <color name="colorPrimaryDark">#080c21</color>
-    <color name="colorAccent">#080c21</color>
+    <!-- Modern Design System Colors -->
+    
+    <!-- Primary Colors - Deep Blue -->
+    <color name="colorPrimary">#1A237E</color>
+    <color name="colorPrimaryDark">#0D1442</color>
+    <color name="colorPrimaryLight">#534BAE</color>
+    
+    <!-- Gradient Colors - Teal to Light Cyan -->
+    <color name="gradientStart">#00897B</color>
+    <color name="gradientEnd">#B2EBF2</color>
+    <color name="gradientMiddle">#4DD0E1</color>
+    
+    <!-- Accent Colors - Turquoise/Green -->
+    <color name="colorAccent">#00BFA5</color>
+    <color name="colorAccentLight">#5DF2D6</color>
+    <color name="colorAccentDark">#008E7B</color>
+    
+    <!-- Secondary Accent -->
     <color name="colorAccent2">#FF4081</color>
-    <color name="grey2">#747474</color>
-    <color name="white">#ffffff</color>
-    <color name="faint">#ececec</color>
-    <color name="cyan">#d5c90004</color>
-
-
-    <color name="Green">#00ff00</color>
-    <color name="Green2">#00c600</color>
-    <color name="Orange">#FFA500</color>
-    <color name="Orange2">#ffbe48</color>
-    <color name="yellow">#f7de04</color>
-    <color name="Red">#000</color>
-    <color name="Black">#000000</color>
-    <color name="Blue">#d5cf4200</color>
+    
+    <!-- Neutral Colors -->
+    <color name="white">#FFFFFF</color>
     <color name="White">#FFFFFF</color>
+    <color name="offWhite">#FAFAFA</color>
+    <color name="lightGray">#F5F5F5</color>
+    <color name="mediumGray">#9E9E9E</color>
+    <color name="darkGray">#616161</color>
+    <color name="gray2">#747474</color>
+    <color name="grey2">#747474</color>
+    <color name="faint">#ECECEC</color>
+    <color name="Black">#000000</color>
     <color name="Gray">#404040</color>
-    <color name="blue">#00197c</color>
+    
+    <!-- Status Colors -->
+    <color name="Green">#00C853</color>
+    <color name="Green2">#00E676</color>
+    <color name="Orange">#FF9800</color>
+    <color name="Orange2">#FFB74D</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="Red">#D32F2F</color>
+    <color name="Blue">#1976D2</color>
+    <color name="blue">#00197C</color>
+    
+    <!-- Legacy Colors (kept for compatibility) -->
+    <color name="cyan">#d5c90004</color>
     <color name="colorPrimary2">#121248</color>
-
+    
+    <!-- Card and Surface Colors -->
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="surfaceBackground">#FAFAFA</color>
+    <color name="inputBackground">#F5F5F5</color>
+    
+    <!-- Text Colors -->
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="textHint">#9E9E9E</color>
+    <color name="textLight">#FFFFFF</color>
+    
+    <!-- Shadow Colors -->
+    <color name="shadowColor">#1A000000</color>
+    <color name="shadowColorLight">#0D000000</color>
 
 </resources>

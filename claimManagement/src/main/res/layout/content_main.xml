@@ -8,115 +8,179 @@
     tools:context="org.openimis.imisclaims.MainActivity"
     tools:showIn="@layout/app_bar_main"
     android:orientation="vertical"
-    android:layout_margin="30dp">
+    android:background="@color/offWhite"
+    android:padding="16dp">
 
+    <!-- Dashboard Title -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:typeface="monospace"
-        android:fontFamily="sans-serif-light"
-        android:textSize="25dp"
-        android:textColor="@color/Black"
-        android:layout_marginBottom="20dp"
-        android:text="@string/dashboard"/>
-    
-    <RelativeLayout
+        android:text="@string/dashboard"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary" />
+
+    <!-- Stats Cards Container -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
 
-        <TextView
-            android:id="@+id/pink"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@mipmap/ic_launcher_round"/>
-
-        <TextView
-            android:id="@+id/accepted"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/accepted"
-            android:layout_toRightOf="@+id/pink"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="10dp"
-            android:typeface="monospace"
-            android:textColor="@color/Black"
-            android:fontFamily="sans-serif-light" />
-
-        <TextView
-            android:id="@+id/accepted_count"
+        <!-- Accepted Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10"
-            android:layout_toRightOf="@+id/accepted"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="10dp"
-            android:typeface="monospace"
-            android:textColor="@color/blue"
-            android:textAlignment="textEnd"
-            android:layout_alignParentRight="true"
-            android:fontFamily="sans-serif-light" />
+            android:orientation="horizontal"
+            android:background="@drawable/bg_stat_card"
+            android:padding="20dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
 
+            <ImageView
+                android:id="@+id/pink"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_accepted"
+                android:padding="12dp"
+                android:background="@drawable/bg_icon_circle_green"
+                android:contentDescription="@string/accepted" />
 
-        <TextView
-            android:id="@+id/rejected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rejected"
-            android:layout_toRightOf="@+id/pink"
-            android:layout_below="@id/accepted"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:typeface="monospace"
-            android:textColor="@color/Black"
-            android:fontFamily="sans-serif-light" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/rejected_count"
+                <TextView
+                    android:id="@+id/accepted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accepted"
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:textColor="@color/textSecondary" />
+
+                <TextView
+                    android:id="@+id/accepted_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Green" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Rejected Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_toRightOf="@+id/rejected"
-            android:layout_below="@+id/accepted_count"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="10dp"
-            android:typeface="monospace"
-            android:textColor="@color/blue"
-            android:textAlignment="textEnd"
-            android:layout_alignParentRight="true"
-            android:fontFamily="sans-serif-light" />
+            android:orientation="horizontal"
+            android:background="@drawable/bg_stat_card"
+            android:padding="20dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
 
-        <TextView
-            android:id="@+id/pending"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pending"
-            android:layout_toRightOf="@+id/pink"
-            android:layout_below="@id/rejected"
-            android:layout_marginLeft="10dp"
-            android:typeface="monospace"
-            android:textColor="@color/Black"
-            android:fontFamily="sans-serif-light" />
+            <ImageView
+                android:id="@+id/rejected_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_rejected"
+                android:padding="12dp"
+                android:background="@drawable/bg_icon_circle_red"
+                android:contentDescription="@string/rejected" />
 
-        <TextView
-            android:id="@+id/entered_count"
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/rejected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rejected"
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:textColor="@color/textSecondary" />
+
+                <TextView
+                    android:id="@+id/rejected_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Red" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Pending Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5"
-            android:layout_toRightOf="@+id/pending"
-            android:layout_below="@+id/rejected_count"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="10dp"
-            android:typeface="monospace"
-            android:textColor="@color/blue"
-            android:textAlignment="textEnd"
-            android:layout_alignParentRight="true"
-            android:fontFamily="sans-serif-light" />
-    </RelativeLayout>
+            android:orientation="horizontal"
+            android:background="@drawable/bg_stat_card"
+            android:padding="20dp"
+            android:elevation="2dp">
 
+            <ImageView
+                android:id="@+id/pending_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_pending"
+                android:padding="12dp"
+                android:background="@drawable/bg_icon_circle_orange"
+                android:contentDescription="@string/pending" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/pending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pending"
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:textColor="@color/textSecondary" />
+
+                <TextView
+                    android:id="@+id/entered_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Orange" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

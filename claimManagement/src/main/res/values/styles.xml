@@ -6,22 +6,84 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/offWhite</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/offWhite</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="CustomTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <!-- Modern Card Style -->
+    <style name="ModernCard">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/cardBackground</item>
+    </style>
+
+    <!-- Modern Button Style -->
+    <style name="ModernButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button_gradient</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@animator/button_state_animator</item>
+    </style>
+
+    <!-- Modern EditText Style -->
+    <style name="ModernEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/bg_input_field</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textColorHint">@color/textHint</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- Modern TextView Title Style -->
+    <style name="ModernTitleText">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Modern TextView Subtitle Style -->
+    <style name="ModernSubtitleText">
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Modern TextView Body Style -->
+    <style name="ModernBodyText">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Modern Toolbar Style -->
+    <style name="ModernToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Modern Navigation Header Style -->
+    <style name="ModernNavHeader">
+        <item name="android:background">@drawable/bg_nav_header_gradient</item>
     </style>
 
 </resources>
